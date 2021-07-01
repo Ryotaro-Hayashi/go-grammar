@@ -94,3 +94,10 @@ https://qiita.com/k-penguin-sato/items/5b09fa89d8d231bcdac8
 
 - UI層（interfaces）, Infrastructure層(infrastructure), Application層(usecase), Domain層(domain)
 - リクエストがinterfacesに入り, handlerでリクエストやレスポンスの処理をしたり, エラーハンドリングを行う. リクエストの処理ではusecaseを呼び出す. usecaseはdomainのrepositoryやserviceに依存するが, domainにはビジネスロジックのみを記述するので, interfaceを定義し, DIPで実装はinfrastructureに書く.
+
+#### $GOROOTと$GOPATH
+
+- $GOROOTはGoのルートディレクトリ（あまり気にしないで良い）
+- $GOPATHはGoのワーキングディレクトリ（GOPATHは作業ディレクトリを参照するようにしておく）
+- go getしたパッケージやgo modのパッケージは$GOPATH/pkg/mod の下に入る
+
